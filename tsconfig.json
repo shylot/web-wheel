@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "module": "commonjs",
     // 可直接通过import的方式引入commonjs模块
     "target": "es5",
+    "outDir": "dist/types",
     "sourceMap": true,
+    "paths": {
+      "@": ["src"],
+    },
     // 是否生成.d.ts
     "declaration": true,
     // 是否允许默认导入： 开启后, 依赖的模块如果没有导出默认， 那么typescript会帮你给该模块自动合成一个默认导出让你可以通过默认导入的方式引用该模块
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"]
 }
