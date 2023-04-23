@@ -1,14 +1,17 @@
 import * as path from "path";
-
+const mode = process.env;
 module.exports = {
     mode: 'production',
-    entry: {
-        util: './src/util.ts',
-        ui: './src/ui.ts'
-    },
+    entry: './src/Index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: 'webWheel.js',
+        library: {
+            type: 'umd', // umd, amd(define)
+        },
+    },
+    optimization: {
+        minimize: false
     },
     resolve: {
         alias: {

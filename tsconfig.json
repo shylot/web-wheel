@@ -7,7 +7,7 @@
     "outDir": "dist/types",
     "sourceMap": true,
     "paths": {
-      "@": ["src"],
+      "@/*": ["src/*"],
     },
     // 是否生成.d.ts
     "declaration": true,

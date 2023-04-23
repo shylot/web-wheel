@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-Wheel 测试页面</title>
+    <script src="dist/webWheel.js"></script>
+</head>
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        height: 400px;
+        width: 100%;
+        background: pink;
+    }
+
+    .opt {
+        height: 100px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .opt-item {
+        height: 40px;
+    }
+</style>
+<body>
+    <div id="container" class="container">
+        <button onclick="toggleFull('container')">全屏</button>
+        <button onclick="toggleFull()">整个容器全屏</button>
+    </div>
+</body>
+
+<script>
+
+    const toggleFull = (id) => {
+        const containerDom = document.getElementById(id);
+        const fullScreen = new webWheel.dom.FullScreen(containerDom);
+        fullScreen.toggle();
+    }
+</script>
+
+</html>
