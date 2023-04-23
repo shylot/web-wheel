@@ -4,5 +4,3 @@ node_modules
 
 # 具体文件
 package-lock.json
-tsconfig.json
-webpack.config.ts
