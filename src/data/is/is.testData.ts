@@ -10,7 +10,7 @@ export default {
     '"true"': 'true',
     '"a"': 'a',
     '"-"': '-',
-    '': '',
+    '空字符串': '',
     'null': null,
     'undefined': undefined,
     '"null"': 'null',
