@@ -19,11 +19,12 @@ export default {
     '[]': [],
     'NaN': NaN,
 
+    'Function': Function(),
+    '() => {}': () => {},
+
     'Symbol()': Symbol(),
     'new Set()': new Set(),
     'new Map()': new Map(),
     'new RegExp()': new RegExp(''),
-
-    'Function': Function(),
-    '() => {}': () => {},
+    'new Date()': new Date(),
 }

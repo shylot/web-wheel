@@ -5,7 +5,7 @@ const getType = (val: unknown) => {
     return type
 }
 
-const is = (val: unknown, type: string) => {
+const isType = (val: unknown, type: string) => {
     // return Object.prototype.toString.call(val) === `[object ${type}]`;
     return getType(val) === type;
 }
@@ -32,7 +32,7 @@ const isObject = (val: unknown) => {
 
 // 纯粹的对象 - 非数组
 const isPureObject = (val: unknown) => {
-    return is(val, 'Object');
+    return isType(val, 'Object');
 }
 
 const isArray = (val: unknown) => {
@@ -47,13 +47,13 @@ const isFunction = (val: unknown) => {
 }
 
 const isSet = (val: unknown) => {
-    return is(val, IDataType.SET);
+    return isType(val, IDataType.SET);
 }
 const isMap = (val: unknown) => {
-    return is(val, IDataType.MAP);
+    return isType(val, IDataType.MAP);
 }
 export default {
-    is,
+    isType,
     isNumber,
     isNumberNaN,
     isBoolean,
